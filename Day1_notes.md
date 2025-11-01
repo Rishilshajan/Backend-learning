@@ -42,21 +42,22 @@ DELETE  https://jsonplaceholder.typicode.com/posts/1
 
 
 🧾 Common Status Codes
+
 Code	                      Meaning	                     Notes
-200 OK	                    Successful request	         Everything worked
-201 Created	                New resource created	       Returned on POST success
-204                         Created,No Content
-301                         Moved Permanently
-302                         Moved Temporarily
-304                         Not Modified
-400 Bad Request             Cannot understand Request
+200 OK	                      Successful request	         Everything worked
+201 Created	                  New resource created	         Returned on POST success
+204                           Created,No Content
+301                           Moved Permanently
+302                           Found Temporarily
+304                           Not Modified
+400 Bad Request               Cannot understand Request
 401 Unauthorized
 403 Forbidden
 404 Not Found	              Resource doesn’t exist	     Wrong URL/id
-500 Internal Server Error	  Server-side error	           Code bug / crash
-502 Bad Gateway             
-503 Server Unavailable
-504 Bad Gateway
+500 Internal Server Error	  Server-side error	             Code bug / crash
+502 Bad Gateway               
+503 Server Unavailable        Down or Overloaded
+504 Gateway Timeout
 
 
 3️⃣ API Testing — Postman | curl | Python requests
