@@ -26,11 +26,11 @@ Steps Explained:
 
 
 2️⃣ HTTP Methods & Status Codes
-⚙️ HTTP Methods
+⚙️ HTTP Methods - Actions we want to perform a Website
 
 Method    Purpose	               Example Use
-GET	      Retrieve data          Fetch a user list
-POST	    Create data	           Submit a form / add record
+GET	      Retrieve data            Fetch a user list
+POST	  Create data	           Submit a form / add record
 PUT	      Update/replace data	   Edit an existing record
 DELETE	  Remove data	           Delete a post	
 
@@ -41,7 +41,7 @@ PUT     https://jsonplaceholder.typicode.com/posts/1
 DELETE  https://jsonplaceholder.typicode.com/posts/1
 
 
-🧾 Common Status Codes
+🧾 Common Status Codes - Outcome of an HTTP Request
 
 Code	                      Meaning	                     Notes
 200 OK	                      Successful request	         Everything worked
