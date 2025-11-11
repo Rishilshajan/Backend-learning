@@ -1,0 +1,46 @@
+<! DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<fieldset>
+			<legend>Form</legend>
+				<form id="Userform">
+					<br />
+					<label for="name">Name</label>
+					<input type="text" name="Fname" id="name" placeholder="John Doe" required>
+					<br />
+
+					<br />
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" placeholder="johndoe@gmail.com" required>
+					<br />
+
+					<br />
+					<button type="submit">Submit</button>
+					<br />
+		</fieldset>	
+	</body>
+
+	<script>
+		const form = document.getElementById("Userform")
+		form.addEventListener( "submit", async(e) => {
+			e.preventDefault();
+			const data = new FormData(e.target);
+
+			try{
+				const resp = await fetch("/api/users" , {
+					method: "POST",
+					headers: {"Content-Type":"application/json"},
+					body: JSON.stringify(data)
+				});
+				const json = await resp.json()
+				console.log("Server Response: ",json);
+			}catch(err){
+				console.error("Request Failed:",err)
+			}
+		});
+	</script>
+		
+</html>	
