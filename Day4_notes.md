@@ -9,7 +9,6 @@ Setting up Flask environment, writing your first API routes, and revising advanc
 
 
 ⚙️ What is a Virtual Environment (venv)?
-
 => A virtual environment is an isolated Python environment that allows you to install project-specific dependencies without affecting global packages.
 
 💡 Analogy:
@@ -140,6 +139,7 @@ A decorator modifies or enhances the behavior of a function without changing its
 💡 Analogy:
 Think of it like wrapping a gift — you enhance it, but the content remains the same.
 
+
 def uppercase(func):
     def wrapper():
         msg = func()
@@ -220,3 +220,5 @@ Environment Setup	    Flask + venv	                 Isolated workspace setup for
 First API	            / and /info routes	             Routing, jsonify, app.run(debug=True)
 Python Refresher	    Decorators, *args, **kwargs	     Advanced syntax features for clean, reusable code
 Java Refresher	        Classes & Constructors	         Object-oriented fundamentals
+
+* For more references , check demo.py of FLASK folder.

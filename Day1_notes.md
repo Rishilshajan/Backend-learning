@@ -34,7 +34,7 @@ POST	  Create data	           Submit a form / add record
 PUT	      Update/replace data	   Edit an existing record
 DELETE	  Remove data	           Delete a post	
 
-Exmaples:
+Examples:
 GET     https://jsonplaceholder.typicode.com/posts
 POST    https://jsonplaceholder.typicode.com/posts
 PUT     https://jsonplaceholder.typicode.com/posts/1
@@ -83,7 +83,7 @@ Code	                      Meaning	                     Notes
 
 => Command-line HTTP client for quick inline testing or scripting.
 
-c) Using Python requests
+c) Using Python requests (REST_API => Python_Requests.py)
 
 import requests
 url = "https://jsonplaceholder.typicode.com/posts"
@@ -107,3 +107,7 @@ print(resp.json())          # → JSON response
 5️⃣ Mini DSA Tasks(Backend_Learning.ipynb)
 * Reverse a String
 * Count Character Frequency
+
+
+* Python Requests are present in Python_Requests.py of REST_API Folder.
+* DSA Tasks are present in Backend_Learning.ipynb

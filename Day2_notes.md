@@ -16,23 +16,22 @@ Understanding Git & GitHub, version control workflow, JavaScript ES6 basics, HTM
 ⚙️ Common Git Commands & Syntax
 
 Command	                                             Description
-git init	                                         Initialize a new Git repository.
-git add .	                                         Stage all changes for commit.
+git init	                                           Initialize a new Git repository.
+git add .	                                           Stage all changes for commit.
 git status	                                         Check modified/untracked files.
 git commit -m "message"	                             Save staged changes with a message.
 git branch branch_name	                             Create a new branch.
-git checkout branch_name	                         Switch to another branch.
-git merge branch_name	                             Merge a branch into the main branch.
-git remote add origin <repo_URL>	                 Link local repo to GitHub remote.
-git push origin main	                             Push commits to GitHub main branch.
-git pull origin main	                             Pull updates from remote repository.    
+git checkout branch_name	                           Switch to another branch.
+git merge branch_name	                               Merge a branch into the main branch.
+git remote add origin <repo_URL>	                   Link local repo to GitHub remote.
+git push origin main	                               Push commits to GitHub main branch.
+git pull origin main	                               Pull updates from remote repository.    
 git log/ git log --oneline --graph --all             View Commit History
 git fetch origin                                     Download Remote Changes
 git diff                                             Shows Unstaged Changes
 
 
-🪄 .gitignore
-
+⚙️  .gitignore
 A .gitignore file specifies which files and folders Git should ignore while tracking.
 Common examples:
  __pycache__/
@@ -42,7 +41,6 @@ Common examples:
 
 
 🔀 Branching and Merging
-
 Branching allows you to create an independent line of development — useful for testing, adding features, or 
 fixing bugs without disturbing the main codebase.
 
@@ -60,10 +58,12 @@ git merge featureX
 ⚔️ Merge Conflict - A merge conflict occurs when two branches modify the same part of a file, 
 and Git cannot automatically decide which version to keep.
 
+
 Example Scenario:
 Branch main changes line 10 in app.py
 Branch featureX also changes line 10 in app.py
 When merging featureX into main, Git stops and asks you to resolve the conflict manually.
+
 
 To Resolve:
 1.Edit the file manually and keep the correct code.
@@ -74,9 +74,9 @@ To Resolve:
 
 
 ⚡ Fast-Forward Merge
-
 A fast-forward merge happens when the branch being merged has no new commits since the feature branch started.
 Git simply moves the branch pointer forward — no new merge commit is created.
+
 
 Example:
  git checkout main
@@ -92,7 +92,6 @@ Diagramatic Representation:
 
 
 🧩 Merge Commit
-
 When branches diverge, Git cannot fast-forward.
 In such cases, Git creates a new commit (called a merge commit) that has two parents — combining both histories.
 
@@ -197,5 +196,7 @@ Grid Example:
 }
 
 🧠 4. DSA Task — Stack Implementation in Python(Backend_learning.ipynb)  
+
+* DSA Tasks are present in Backend_Learning.ipynb
 
 

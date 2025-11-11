@@ -18,10 +18,10 @@ Example:
 
 Feature	                   REST	                                            GraphQL
 Definition	               Architecture using endpoints & HTTP methods	    Query language for APIs developed by Facebook
-Endpoints	               Multiple (/users, /posts)	                    Single (/graphql)
-Data Fetching	           Fixed response per endpoint	                    Client decides exact fields
-Request Format	           HTTP (GET, POST, PUT, DELETE)	                Query-based
-Best For	               CRUD-based APIs	                                Complex, data-intensive apps	
+Endpoints	                 Multiple (/users, /posts)	                      Single (/graphql)
+Data Fetching	             Fixed response per endpoint	                    Client decides exact fields
+Request Format	           HTTP (GET, POST, PUT, DELETE)	                  Query-based
+Best For	                 CRUD-based APIs	                                Complex, data-intensive apps	
 
 
 ✅ REST Key Points
@@ -29,7 +29,7 @@ Uses HTTP methods:
 
 Method	     Purpose
 GET	         Retrieve data
-POST	     Create new data
+POST	       Create new data
 PUT	         Update/replace data
 DELETE	     Remove data
 
@@ -59,9 +59,9 @@ Response:
 	https://jsonplaceholder.typicode.com/posts
 
 Method	   Endpoint	     Description
-GET	       /posts	     Fetch all posts
+GET	       /posts	       Fetch all posts
 GET	       /posts/1	     Fetch post with ID 1
-POST	   /posts	     Create new post
+POST	     /posts	       Create new post
 PUT	       /posts/1	     Update post with ID 1	
 
 
@@ -74,87 +74,16 @@ Used in POST and PUT:
 }
 
 
-💻 4️⃣ Practical Session – JSON in Python
-📁 Read JSON File:
-import json 
-from pathlib import Path
+💻 4️⃣ Practical Session – JSON in Python (REST_API => Files)
+📁 Read JSON File
 
-path = Path("data.json")
-with path.open("r", encoding="utf-8") as f:
-	data = json.load(f)
-print("Loaded Data Type: ",type(data))
-print(json.dumps(data, indent=0))	
+📁 Write JSON File
 
+📁 GET RQUEST
 
-📁 Write JSON File:
-import json 
-from pathlib import Path
+📁 POST REQUEST
 
-path = Path("data.json")
-data = json.loads(path.read_text(encoding="utf-8"))
-
-data["last_updated"] = "2025-11-05T10:00:00+05:30"
-
-path.write_text(json.dumps(data, indent=2), encoding="utf-8")
-print("Updated data.json")	
-
-
-📁 GET RQUEST:
-import requests
-import json
-
-url = "https://jsonplaceholder.typicode.com/posts/1"
-headers = {"Authorization": "Bearer <token>", "Accept": "application/json"}
-
-try:
-	resp = requests.get(url, params={"userId": 1}, headers= headers, timeout= 5)
-	resp.raise_for_status()
-	print("Status Code:",resp.status_code)
-	data = resp.json()
-	print(json.dumps(data, indent=2))
-
-except requests.RequestException as e:
-	print("Error Occured: ",e)	
-
-
-📁 POST REQUEST:
-import requests
-import json
-from pathlib import Path
-
-url = "https://jsonplaceholder.typicode.com/posts/"
-path = Path("data.json")
-payload = json.loads(path.read_text(encoding="utf-8"))
-
-try:
-	resp = requests.post(url, json= payload, timeout=6)
-	print("Status Code:",resp.status_code)
-	print("Data Created Successfully")
-	data = resp.json()
-	print(json.dumps(data, indent=2))
-	
-except requests.RequestException as e:
-	print("Error Occured: ",e)	
-
-
-📁 PUT REQUEST:
-import requests, json
-from pathlib import Path
-
-url = "https://jsonplaceholder.typicode.com/posts/1"
-path = Path("data.json")
-payload = json.loads(path.read_text(encoding="utf-8"))
-payload["Title"] = "Header"
-
-try:
-	resp = requests.put(url, json= payload, timeout=6)
-	print("Status Code:",resp.status_code)
-	print("Data Created Successfully")
-	data = resp.json()
-	print(json.dumps(data, indent=2))
-	
-except requests.RequestException as e:
-	print("Error Occured: ",e)	
+📁 PUT REQUEST
 
 
 ⚙️ 5️⃣ Syntax Hour (Node.js + TypeScript)
@@ -186,11 +115,13 @@ const greet = (name: string): void => {
 
 
 🧾 Interface & Type Alias:
+
 interface User {
   id: number;
   name: string;
   isActive: boolean;
 }
+
 
 type Product = {
   id: number;
@@ -209,5 +140,9 @@ console.log(add(10, 5));
 
 
 🧮 6️⃣ DSA Drill – Find 2nd Largest Number Without Sorting(Backend_learning.py)
+
+
+* Python Requests are present in REST_API Folder.
+* DSA Tasks are present in Backend_Learning.ipynb
 
 
